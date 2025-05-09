@@ -1,0 +1,18 @@
+[project]
+name = "botscan"
+version = "0.1.0"
+description = "Linter e formatação para automações RPA com Python"
+authors = [
+    { name = "Ruan Machado", email = "teu@email.com" }
+]
+requires-python = ">=3.8"
+dependencies = [
+    "black>=24.3.0",
+    "pylint>=3.1.0",
+]
+
+[project.scripts]
+botscan = "botscan.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
