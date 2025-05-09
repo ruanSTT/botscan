@@ -1,28 +1,28 @@
 # botscan-rpa
 
-> Linter especializado para automações RPA com Python, usando [Black](https://black.readthedocs.io/) e [Pylint](https://pylint.readthedocs.io/) com verificações inteligentes voltadas à robótica de processos.
+> A specialized linter for RPA automation with Python, using [Black](https://black.readthedocs.io/) and [Pylint](https://pylint.readthedocs.io/) with smart checks focused on process robotics.
 
 ---
 
-## Visão Geral
+## Overview
 
-**botscan-rpa** é uma ferramenta de linha de comando que aplica boas práticas de codificação para scripts de automação em Python, especialmente para quem desenvolve RPA com bibliotecas como `pywinauto`, `botcity`, `uiautomation`, entre outras.
+**botscan-rpa** is a command-line tool that enforces good coding practices for Python automation scripts, especially for those developing RPA with libraries like `pywinauto`, `botcity`, `uiautomation`, and others.
 
-Ela usa:
+It uses:
 
-- **Pylint==3.1.0** para detectar problemas no estilo e possíveis bugs.
-- **Black==24.3.0** para formatar automaticamente o código.
-- 🛡️ Regras customizadas voltadas a automações:
-  - Evita `print()` sem controle.
-  - Detecta `time.sleep()` sem explicação.
-  - Alerta sobre caminhos hardcoded como `C:\\Users\\...`.
-  - Identifica `try/except` genéricos perigosos.
+- **Pylint==3.1.0** to detect style issues and potential bugs.
+- **Black==24.3.0** to automatically format code.
+- 🛡️ Custom rules for automation:
+  - Prevents uncontrolled use of `print()`.
+  - Detects `time.sleep()` without explanation.
+  - Warns about hardcoded paths like `C:\\Users\\...`.
+  - Identifies dangerous generic `try/except` blocks.
 
 ---
 
-## Instalação
+## Installation
 
-Clone o repositório e instale com:
+Clone the repository and install it with:
 
 ```bash
 git clone https://github.com/ruan-stt/botscan-rpa.git
