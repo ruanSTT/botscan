@@ -11,6 +11,7 @@ build/
 .cache/
 coverage/
 *.log
+tests
 
 .vscode/
 .idea/

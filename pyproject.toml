@@ -1,9 +1,12 @@
+[tool.pylint]
+load-plugins = ["botscan"]
+
 [project]
 name = "botscan"
 version = "0.1.0"
-description = "Linter e formatação para automações RPA com Python"
+description = "Linter and formatting for RPA automations with Python"
 authors = [
-    { name = "Ruan Machado", email = "teu@email.com" }
+    { name = "Ruan Machado", email = "whiterun092@gmail.com" }
 ]
 requires-python = ">=3.8"
 dependencies = [
@@ -11,8 +14,9 @@ dependencies = [
     "pylint>=3.1.0",
 ]
 
-[project.scripts]
-botscan = "botscan.cli:main"
-
 [tool.setuptools.packages.find]
 where = ["."]
+
+[tool.pytest.ini_options]
+addopts = "--tb=short -q"
+testpaths = ["tests"]

@@ -15,19 +15,19 @@ def main():
     args = parser.parse_args()
 
     if not os.path.exists(args.path):
-        print(f"❌ Caminho não encontrado: {args.path}")
+        print(f"Caminho não encontrado: {args.path}")
         return
 
     if args.lint:
-        print("🔍 Executando Pylint (com regras RPA)...")
+        print("Executando Pylint (com regras RPA)...")
         lint_code(args.path, lang=args.lang)
     elif args.format:
-        print("🧹 Formatando com Black...")
+        print("Formatando com Black...")
         format_code(args.path)
     else:
-        print("🧹 Formatando com Black...")
+        print("Formatando com Black...")
         format_code(args.path)
-        print("\n🔍 Executando Pylint (com regras RPA)...")
+        print("\n Executando Pylint (com regras RPA)...")
         lint_code(args.path, lang=args.lang)
 
 
